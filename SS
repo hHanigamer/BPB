@@ -1,0 +1,10 @@
+import asyncio
+from splusthon import SoroushClient
+from splusthon.sessions import StringSession
+
+async def main():
+    client = SoroushClient(StringSession())
+    await client.start(phone=+989735312075)
+    print(client.session.save())
+
+asyncio.run(main())
