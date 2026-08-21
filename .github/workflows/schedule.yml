@@ -1,8 +1,8 @@
-name: Send Soroush Reminder
+name: Send BPB
 
 on:
   schedule:
-    - cron: '0 * * * *'  # هر ساعت یکبار، دقیقاً روی ساعت صفر
+    - cron: '1 * * * *'  # هر ساعت یکبار، دقیقاً روی ساعت صفر
   workflow_dispatch:  # این یه دکمه برای اجرای دستی اضافه می‌کنه
 
 jobs:
@@ -26,3 +26,4 @@ jobs:
       env:
         SOROUSH_PHONE: ${{ secrets.SOROUSH_PHONE }}
         TARGET_USER: ${{ secrets.TARGET_USER }}
+        SOROUSH_SESSION: ${{ secrets.SOROUSH_SEESION }}
