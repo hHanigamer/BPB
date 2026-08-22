@@ -14,6 +14,7 @@ async def main():
     ma = 0
     alaf = 0
     naz = 0
+    kar = 0
     
     while True:
 
@@ -21,6 +22,7 @@ async def main():
         ma += 1 
         alaf += 1
         naz += 1
+        kar += 1
             
         if ma >= 5:
             try:
@@ -49,6 +51,14 @@ async def main():
             except Exception as e:
                 print(f"خطا: {e}")
             naz = 0
+
+        if kar >= 15:
+            try:
+                await client.send_message(recipient, 'جمع آوری کارخانه')
+                print(f"[{datetime.now()}] پیام ارسال شد.")
+            except Exception as e:
+                print(f"خطا: {e}")
+            kar = 0
 
 
 if __name__ == '__main__':
