@@ -15,6 +15,16 @@ async def main():
     alaf = 0
     naz = 0
     kar = 0
+    tamiz = 0
+    shird = 0
+    shirf = 0
+    gard = 0
+    kiss = 0
+    gaza = 0
+    alafyab = 0
+    bare = 0
+
+
     
     while True:
 
@@ -23,6 +33,14 @@ async def main():
         alaf += 1
         naz += 1
         kar += 1
+        tamiz += 1
+        shird += 1
+        shirf += 1
+        gard += 1
+        kiss += 1
+        gaza += 1
+        alafyab += 1
+        bare += 1
             
         if ma >= 5:
             try:
@@ -38,12 +56,24 @@ async def main():
                 print(f"[{datetime.now()}] پیام ارسال شد.")
             except Exception as e:
                 print(f"خطا: {e}")
-                await client.send_message(recipient, 'بهش غذا بده')
+            alaf = 0
+
+        if alafyab >= 7:
+            try:
+                await client.send_message(recipient, 'علف یاب بخر')
                 print(f"[{datetime.now()}] پیام ارسال شد.")
             except Exception as e:
                 print(f"خطا: {e}")
-            alaf = 0
-
+            alafyab = 0
+            
+        if gaza >= 7:
+            try:
+                await client.send_message(recipient, 'غذا بده همه')
+                print(f"[{datetime.now()}] پیام ارسال شد.")
+            except Exception as e:
+                print(f"خطا: {e}")
+            gaza = 0
+        
         if naz >= 9:
             try:
                 await client.send_message(recipient, 'نازش کن')
@@ -52,6 +82,46 @@ async def main():
                 print(f"خطا: {e}")
             naz = 0
 
+        if tamiz >= 10:
+            try:
+                await client.send_message(recipient, 'تمیزش کن')
+                print(f"[{datetime.now()}] پیام ارسال شد.")
+            except Exception as e:
+                print(f"خطا: {e}")
+            tamiz = 0
+        
+        if shird >= 10:
+            try:
+                await client.send_message(recipient, 'شیر بز')
+                print(f"[{datetime.now()}] پیام ارسال شد.")
+            except Exception as e:
+                print(f"خطا: {e}")
+            shird = 0
+                
+        if gard >= 10:
+            try:
+                await client.send_message(recipient, 'گردش')
+                print(f"[{datetime.now()}] پیام ارسال شد.")
+            except Exception as e:
+                print(f"خطا: {e}")
+            gard = 0
+                        
+        if kiss >= 10:
+            try:
+                await client.send_message(recipient, 'بوسش کن')
+                print(f"[{datetime.now()}] پیام ارسال شد.")
+            except Exception as e:
+                print(f"خطا: {e}")
+            kiss = 0
+                        
+        if bare >= 15:
+            try:
+                await client.send_message(recipient, 'برداشت بره ناقلا')
+                print(f"[{datetime.now()}] پیام ارسال شد.")
+            except Exception as e:
+                print(f"خطا: {e}")
+            bare = 0
+        
         if kar >= 15:
             try:
                 await client.send_message(recipient, 'جمع آوری کارخانه')
@@ -59,7 +129,15 @@ async def main():
             except Exception as e:
                 print(f"خطا: {e}")
             kar = 0
-
+                
+        if shirf >= 30:
+            try:
+                await client.send_message(recipient, 'فروش شیر')
+                print(f"[{datetime.now()}] پیام ارسال شد.")
+            except Exception as e:
+                print(f"خطا: {e}")
+            shirf = 0
+        
 
 if __name__ == '__main__':
     asyncio.run(main())
