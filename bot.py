@@ -9,7 +9,7 @@ async def main():
     client = SoroushClient(StringSession(SS))
     await client.start()
 
-    recipient = '@BOZPOINT'
+    recipient = '@BOZPOINT2'
     
     ma = 0
     alaf = 0
