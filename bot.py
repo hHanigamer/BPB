@@ -58,7 +58,7 @@ async def main():
                 print(f"خطا: {e}")
             alaf = 0
 
-        if alafyab >= 6:
+        if alafyab >= 8:
             try:
                 await client.send_message(recipient, 'علف یاب بخر')
                 print(f"[{datetime.now()}] پیام ارسال شد.")
