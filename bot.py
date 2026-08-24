@@ -57,7 +57,7 @@ async def main():
                 print(f"خطا: {e}")
             alaf = 0
             
-        if gaza >= 7:
+        if gaza >= 35:
             try:
                 await client.send_message(recipient, 'غذا بده همه')
                 print(f"[{datetime.now()}] پیام ارسال شد.")
