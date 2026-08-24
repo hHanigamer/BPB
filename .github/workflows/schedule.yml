@@ -5,6 +5,12 @@ on:
     - cron: '1 * * * *'  # هر ساعت یکبار، دقیقاً روی ساعت صفر
   workflow_dispatch:  # این یه دکمه برای اجرای دستی اضافه می‌کنه
 
+# ===== جلوگیری از اجرای همزمان =====
+concurrency:
+  group: send-bpb-workflow
+  cancel-in-progress: true
+# ====================================
+
 jobs:
   run-reminder:
     runs-on: ubuntu-latest
