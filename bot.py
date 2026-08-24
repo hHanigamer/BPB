@@ -21,7 +21,6 @@ async def main():
     gard = 0
     kiss = 0
     gaza = 0
-    alafyab = 0
     bare = 0
 
 
@@ -39,7 +38,6 @@ async def main():
         gard += 1
         kiss += 1
         gaza += 1
-        alafyab += 1
         bare += 1
             
         if ma >= 5:
@@ -57,14 +55,6 @@ async def main():
             except Exception as e:
                 print(f"خطا: {e}")
             alaf = 0
-
-        if alafyab >= 8:
-            try:
-                await client.send_message(recipient, 'علف یاب بخر')
-                print(f"[{datetime.now()}] پیام ارسال شد.")
-            except Exception as e:
-                print(f"خطا: {e}")
-            alafyab = 0
             
         if gaza >= 7:
             try:
