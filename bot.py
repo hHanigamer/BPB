@@ -1,4 +1,5 @@
 import asyncio
+import random  # اضافه شد
 from datetime import datetime
 from splusthon import SoroushClient
 from splusthon.sessions import StringSession
@@ -23,11 +24,11 @@ async def main():
     gaza = 0
     bare = 0
 
-
-    
     while True:
-
-        await asyncio.sleep(60.5)
+        # تولید عدد تصادفی بین ۶۰ تا ۷۰ ثانیه
+        sleep_time = random.uniform(60, 70)
+        await asyncio.sleep(sleep_time)
+        
         ma += 1 
         alaf += 1
         naz += 1
