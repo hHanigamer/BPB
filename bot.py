@@ -1,19 +1,16 @@
 import asyncio
 import random
-import re
-from datetime import datetime
 from splusthon import SoroushClient
 from splusthon.sessions import StringSession
 
 SS = "1AwASaW0tc2VydmVyLnNwbHVzLmlyAbvWa4_wnbryukawvNlz9PAL2VVIz-sr-8DFokM5hPQGaP8sbax5GwB4J3kN2iQj1s8yv6Adc3MDiWRjJCpE_H9veTdaw0z77isOIPi-RF94igMtqThLefQ1SP48xuXQpfIdcM9OU_qrHdMKlXJv6pu28uhKqyw-iflQhf3uEzWdeyrIvvCd59aFlVvOxw0aixq-nwoSuBRo91uew3uTf0iSjMK-mBg2EQZynrz09DBMccHQwQHsy7zgnLBC1Ll3psIPIGMXBkAW6g_eautp9j1xX1f8Mm5L_eQLSTBJaP23653mb_mMwMb_M8m43LApslxWws9Exds2Obm_TdSaLBB_"
 
 async def point_task(client, recipient):
-    """ارسال پیام‌های نقطه‌ای با فاصله‌ی ۶۰ تا ۷۰ ثانیه"""
+    """Send dot‑messages every 60–70 seconds."""
     ma = alaf = naz = kar = tamiz = shird = shirf = gard = kiss = gaza = bare = 0
 
     while True:
-        sleep_time = random.uniform(60, 70)
-        await asyncio.sleep(sleep_time)
+        await asyncio.sleep(random.uniform(60, 70))
         
         ma += 1
         alaf += 1
@@ -60,6 +57,12 @@ async def point_task(client, recipient):
         if shirf >= 30:
             await client.send_message(recipient, 'فروش شیر')
             shirf = 0
+
+async def main():
+    client = SoroushClient(StringSession(SS))
+    await client.start()
+    recipient = "@username_or_id"   # ⬅️ Replace with actual recipient
+    await point_task(client, recipient)
 
 if __name__ == '__main__':
     asyncio.run(main())
