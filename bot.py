@@ -61,7 +61,7 @@ async def point_task(client, recipient):
 async def main():
     client = SoroushClient(StringSession(SS))
     await client.start()
-    recipient = "@@BozPointEntegham"   # ⬅️ Replace with actual recipient
+    recipient = "@BozPointEntegham"   # ⬅️ Replace with actual recipient
     await point_task(client, recipient)
 
 if __name__ == '__main__':
